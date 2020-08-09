@@ -16,10 +16,17 @@
 </head>
 <body>
     <div id="container">
-        <img src="images/magret-canard-french-cooking.jpg" alt="magred canard french cooking" class="img-fluid">
+      <!-- Recipe image -->
+        <img 
+          src="images/magret-canard-french-cooking.jpg" 
+          alt="magred canard french cooking" 
+          class="img-fluid"
+        />
         <h1>French cooking</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum consequuntur in praesentium pariatur quia. Provident sequi eos odit tenetur reprehenderit ullam deserunt, quo fuga placeat unde incidunt beatae expedita ex!</p>
         <h2>Overview</h2>
+
+        <!--Presentation of recipe (price, difficulty, ...) -->
         <table class="table table-borderless">
             <tbody>
               <tr>
@@ -39,38 +46,44 @@
             </tbody>
           </table>
         <h2>Ingredients</h2>
-        <h5>Serving <button type="button" class="btn btn-light" id="substract">-</button> <span>4</span> <button type="button" class="btn btn-light" id="add">+</button></h5>
+        <h5>Servings 
+          <button type="button" class="btn btn-light" id="substract"><i class="fas fa-minus"></i></button> 
+          <span>4</span> 
+          <button type="button" class="btn btn-light" id="add"><i class="fas fa-plus"></i></button>
+        </h5>
+        
+        <!-- List of ingredients -->
         <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">Quantity</th>
-                <th scope="col">Metric</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-              </tr>
-            </tbody>
-          </table>
-          <p>List of the recipe Ingredients</p>
+          <caption>List of the recipe Ingredients</caption>
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Metric</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Larry</td>
+              <td>the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
     </div>
 <!-- Script bootstrap -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

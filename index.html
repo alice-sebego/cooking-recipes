@@ -15,76 +15,81 @@
     <title>Cooking Recipes</title>
 </head>
 <body>
-    <div id="container">
-      <!-- Recipe image -->
-        <img 
-          src="images/magret-canard-french-cooking.jpg" 
-          alt="magred canard french cooking" 
-          class="img-fluid"
-        />
-        <h1>French cooking</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum consequuntur in praesentium pariatur quia. Provident sequi eos odit tenetur reprehenderit ullam deserunt, quo fuga placeat unde incidunt beatae expedita ex!</p>
-        <h2>Overview</h2>
-
-        <!--Presentation of recipe (price, difficulty, ...) -->
-        <table class="table table-borderless">
-            <tbody>
-              <tr>
-                <td id="difficulty"><i class="fas fa-star"></i></td>
-                <td id="cost">€</td>
-                <td id="preparation-time">45 mn</td>
-                <td id="cooking-time">30 mn</td>
-                <td id="resting-time">10 mn</td>
-              </tr>
-              <tr>
-                <td>Difficulty</td>
-                <td>Cost</td>
-                <td>Preparation time</td>
-                <td>Cooking time</td>
-                <td>Resting time</td>
-              </tr>
-            </tbody>
-          </table>
-        <h2>Ingredients</h2>
-        <h5>Servings 
-          <button type="button" class="btn btn-light" id="substract"><i class="fas fa-minus"></i></button> 
-          <span>4</span> 
-          <button type="button" class="btn btn-light" id="add"><i class="fas fa-plus"></i></button>
-        </h5>
-        
-        <!-- List of ingredients -->
-        <table class="table">
-          <caption>List of the recipe Ingredients</caption>
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Name</th>
-              <th scope="col">Quantity</th>
-              <th scope="col">Metric</th>
-            </tr>
-          </thead>
+  <header>
+    <!-- Recipe image -->
+    <img 
+    src="images/magret-canard-french-cooking.jpg" 
+    alt="magred canard french cooking" 
+    class="img-fluid"
+    id="img-featured"
+    />
+    <h1>French cooking</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum consequuntur in praesentium pariatur quia. Provident sequi eos odit tenetur reprehenderit ullam deserunt, quo fuga placeat unde incidunt beatae expedita ex!</p>
+  </header>
+  
+  <main id="container">
+    <section>
+      <h2>Overview</h2>
+      <!--Presentation of recipe (price, difficulty, ...) -->
+      <table class="table table-borderless">
           <tbody>
             <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
+              <td id="difficulty"><i class="fas fa-star"></i></td>
+              <td id="cost">€</td>
+              <td id="preparation-time">45 mn</td>
+              <td id="cooking-time">30 mn</td>
+              <td id="resting-time">10 mn</td>
             </tr>
             <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Larry</td>
-              <td>the Bird</td>
-              <td>@twitter</td>
+              <td>Difficulty</td>
+              <td>Cost</td>
+              <td>Preparation time</td>
+              <td>Cooking time</td>
+              <td>Resting time</td>
             </tr>
           </tbody>
         </table>
-    </div>
+      <h2>Ingredients</h2>
+      <h5>Servings 
+        <button type="button" class="btn btn-light" id="substract"><i class="fas fa-minus"></i></button> 
+        <span>4</span> 
+        <button type="button" class="btn btn-light" id="add"><i class="fas fa-plus"></i></button>
+      </h5>
+      
+      <!-- List of ingredients -->
+      <table class="table">
+        <caption>List of the recipe Ingredients</caption>
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Metric</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
 <!-- Script bootstrap -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

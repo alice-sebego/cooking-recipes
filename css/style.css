@@ -1,4 +1,21 @@
-#container{
+header{
+    padding: 3em;
+}
+
+#img-featured {
+    max-width: 50%;
+    height: auto;
+}
+
+h1{
+    text-align: center;
+}
+
+header p{
+    margin: 0 10vw;
+}
+
+main{
     width: 75%;
     margin: auto;
 }
@@ -9,5 +26,4 @@ h1, h2, h5{
 
 h2{
     border-bottom: 1px solid #ccc;
-
 }

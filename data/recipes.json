@@ -1,0 +1,154 @@
+[
+    {
+        "name": "Magret de canard",
+        "description": "Magret de canard | Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum consequuntur in praesentium pariatur quia. Provident sequi eos odit tenetur reprehenderit ullam deserunt, quo fuga placeat unde incidunt beatae expedita ex!",
+        "difficulty": "easy",
+        "cost": "affordable",
+        "preparation_time": "10 mn",
+        "cooking_time": "10 mn",
+        "resting_time": "5 mn",
+        "ingredient": [
+                        {"name": "magret de canard",
+                        "quantity": "150",
+                        "metric": "grammes"
+                        },
+                        {"name": "sel",
+                            "quantity": "1",
+                            "metric": "cuil. à soupe"
+                        },
+                        {"name": "romarin",
+                            "quantity": "2",
+                            "metric": "pincée"
+                        },
+                        {"name": "poivre",
+                            "quantity": "1",
+                            "metric": "pincée"
+                        }
+                      ],
+        "picture": "./images/magret-canard-french-cooking"              
+    },
+    {
+        "name": "Moelleux au chocolat",
+        "description": "Moelleux au chocolat | Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum consequuntur in praesentium pariatur quia. Provident sequi eos odit tenetur reprehenderit ullam deserunt, quo fuga placeat unde incidunt beatae expedita ex!",
+        "difficulty": "easy",
+        "cost": "cheap",
+        "preparation_time": "20 mn",
+        "cooking_time": "40 mn",
+        "resting_time": "5 mn",
+        "ingredient": [
+                        {"name": "farine",
+                        "quantity": "150",
+                        "metric": "grammes"
+                        },
+                        {"name": "oeuf",
+                            "quantity": "5",
+                            "metric": ""
+                        },
+                        {"name": "sucre",
+                            "quantity": "100",
+                            "metric": "grammes"
+                        },
+                        {"name": "chocolat",
+                            "quantity": "200",
+                            "metric": "grammes"
+                        },
+                        {"name": "beurre",
+                            "quantity": "150",
+                            "metric": "grammes"
+                        },
+                        {"name": "levure",
+                            "quantity": "1",
+                            "metric": "sachet"
+                        }
+                       ], 
+        "picture": "./images/moelleux-au-chocolat-french-cooking"              
+    },
+    {
+        "name": "Salade landaise",
+        "description": "Salade landaise | Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum consequuntur in praesentium pariatur quia. Provident sequi eos odit tenetur reprehenderit ullam deserunt, quo fuga placeat unde incidunt beatae expedita ex!",
+        "difficulty": "easy",
+        "cost": "affordable",
+        "preparation_time": "20 mn",
+        "cooking_time": "15 mn",
+        "resting_time": "5 mn",
+        "ingredient": [
+                        {"name": "chêne vert",
+                        "quantity": "1",
+                        "metric": ""
+                        },
+                        {"name": "oeuf",
+                            "quantity": "2",
+                            "metric": ""
+                        },
+                        {"name": "gésiers de canard",
+                            "quantity": "150",
+                            "metric": "grammes"
+                        },
+                        {"name": "tomate",
+                            "quantity": "2",
+                            "metric": ""
+                        },
+                        {"name": "pignon de pin",
+                            "quantity": "50",
+                            "metric": "grammes"
+                        },
+                        {"name": "magret de canard fumé",
+                            "quantity": "100",
+                            "metric": "grammes"
+                        },
+                        {"name": "huile de noix",
+                            "quantity": "5",
+                            "metric": "cl"
+                        }
+                       ], 
+        "picture": "./images/salade-landaise-french-cooking"              
+    },
+    {
+        "name": "Canelés bordelais",
+        "description": "Canelés bordelais | Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum consequuntur in praesentium pariatur quia. Provident sequi eos odit tenetur reprehenderit ullam deserunt, quo fuga placeat unde incidunt beatae expedita ex!",
+        "difficulty": "intermediate",
+        "cost": "cheap",
+        "preparation_time": "20 mn",
+        "cooking_time": "40 mn",
+        "resting_time": "5 mn",
+        "ingredient": [
+                        {"name": "lait",
+                        "quantity": "15",
+                        "metric": "cl"
+                        },
+                        {"name": "oeuf entier",
+                            "quantity": "2",
+                            "metric": ""
+                        },
+                        {"name": "jaune d'oeuf",
+                            "quantity": "2",
+                            "metric": ""
+                        },
+                        {"name": "vanille",
+                            "quantity": "1/2",
+                            "metric": "gousse"
+                        },
+                        {"name": "rhum",
+                            "quantity": "1",
+                            "metric": "cuil. à soupe"
+                        },
+                        {"name": "farine",
+                            "quantity": "100",
+                            "metric": "grammes"
+                        },
+                        {"name": "sucre",
+                            "quantity": "250",
+                            "metric": "grammes"
+                        },
+                        {"name": "beurre doux",
+                            "quantity": "50",
+                            "metric": "grammes"
+                        },
+                        {"name": "sel",
+                            "quantity": "1",
+                            "metric": "pincée"
+                        }
+                       ], 
+        "picture": "./images/canele-bordelais-french-cooking"              
+    }        
+]

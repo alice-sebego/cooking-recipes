@@ -3,8 +3,13 @@ header{
 }
 
 #img-featured {
-    max-width: 50%;
+    max-width: 75%;
     height: auto;
+}
+
+figure{
+    display: flex;
+    justify-content: center;
 }
 
 h1{
@@ -12,7 +17,7 @@ h1{
 }
 
 header p{
-    margin: 0 10vw;
+    margin: 0 8vw;
 }
 
 main{

@@ -1,8 +1,33 @@
 header{
-    padding: 3em;
+    margin-bottom: 1vh;
+}
+
+nav{
+    background-color: rgba(255, 187, 0, 0.9);
+    margin-bottom: 2.5vh;
+    position: fixed;
+    width: 100%;
+}
+
+.nav-link, 
+.nav-link:visited,
+i,
+h1, 
+h2{
+    color: rgb(155, 1, 1);
+}
+
+.nav-link:hover{
+    color: rgb(105, 64, 64);
+    font-weight: bold;
+}
+
+.nav-link:active{
+    color: hsl(0, 98%, 15%);
 }
 
 #img-featured {
+    margin-top: 4.5vh;
     max-width: 75%;
     height: auto;
 }
@@ -31,4 +56,11 @@ h1, h2, h5{
 
 h2{
     border-bottom: 1px solid #ccc;
+}
+
+footer{
+    background-color: rgba(255, 187, 0);
+    margin-top: 1vh;
+    padding: 1vh 2vw;
+    text-align: center;
 }

@@ -2,7 +2,7 @@
 const ulNav = document.querySelector("nav > ul");
 const imgRecipe = document.querySelector("img");
 const h1 = document.querySelector("h1");
-const description = document.querySelector("header > p");
+const description = document.getElementById("description");
 
 const overview = document.getElementById("overview");
 
@@ -44,9 +44,11 @@ ajaxGet("http://localhost/cooking-recipes/data/recipes.json", function(reponse){
         liNav.addEventListener("click", e =>{
             e.preventDefault();
             divIngredient.innerHTML = "";
-
+            imgRecipe.setAttribute("class", "img-fluid");
+            imgRecipe.setAttribute("id", "img-featured");
             imgRecipe.src = recipe.picture;
             imgRecipe.alt = recipe.name;
+
             h1.textContent = recipe.name;
             description.textContent = recipe.description;
             preparation.textContent = recipe.preparation_time;
@@ -56,7 +58,7 @@ ajaxGet("http://localhost/cooking-recipes/data/recipes.json", function(reponse){
             // Overview
             if(recipe.cost === "cheap"){
                 cost.textContent = cheap;
-            } else if(recipe.cost === "affordable"){
+            } else if (recipe.cost === "affordable"){
                 cost.textContent = affordable;
             } else {
                 cost.textContent = expensive;
@@ -64,7 +66,7 @@ ajaxGet("http://localhost/cooking-recipes/data/recipes.json", function(reponse){
 
             if(recipe.difficulty === "easy"){
                 difficulty.innerHTML = easy;
-            } else if(recipe.difficulty === "intermediate"){
+            } else if (recipe.difficulty === "intermediate"){
                 difficulty.innerHTML = intermediate;
             } else {
                 difficulty.innerHTML = difficult;

@@ -14,6 +14,10 @@ const resting = document.getElementById("resting-time");
 
 const divIngredient = document.getElementById("divIngredient");
 
+const substractBtn = document.getElementById("substract");
+const addBtn = document.getElementById("add");
+let nbServing = document.getElementById("nb-serving");
+
 // Cost recipes content
 const cheap = "€";
 const affordable = "€€";
@@ -24,8 +28,9 @@ const easy = "<i class='fas fa-star'></i>";
 const intermediate = "<i class='fas fa-star'></i><i class='fas fa-star'></i>";
 const difficult ="<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>";
 
+
 // --- Create each content for each recipe --- //
-ajaxGet("http://localhost/cooking-recipes/data/recipes.json", function(reponse){
+ajaxGet("http://localhost/cooking-recipes/data/recipes.json", reponse =>{
     const recipes = JSON.parse(reponse);
     
     recipes.forEach(recipe => {
@@ -43,12 +48,13 @@ ajaxGet("http://localhost/cooking-recipes/data/recipes.json", function(reponse){
         // Fill recipe's page for each click on a recipe //
         liNav.addEventListener("click", e =>{
             e.preventDefault();
+            //e.stopPropagation();
             divIngredient.innerHTML = "";
             imgRecipe.setAttribute("class", "img-fluid");
             imgRecipe.setAttribute("id", "img-featured");
             imgRecipe.src = recipe.picture;
             imgRecipe.alt = recipe.name;
-
+            
             h1.textContent = recipe.name;
             description.textContent = recipe.description;
             preparation.textContent = recipe.preparation_time;
@@ -73,34 +79,95 @@ ajaxGet("http://localhost/cooking-recipes/data/recipes.json", function(reponse){
             }
             
             // ingredients
-            const tableIngredients = document.createElement("table");
-            tableIngredients.setAttribute("class", "table");
-            tableIngredients.innerHTML = `<caption>List of the recipe Ingredients</caption>
-                                        <thead>
-                                        <tr>
-                                            <!--<th scope="col">#</th>-->
-                                            <th scope="col">Name</th>
-                                            <th scope="col">Quantity</th>
-                                            <th scope="col">Metric</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody id="tbody">
-                                        </tbody>
-                                        `
-            
-            divIngredient.appendChild(tableIngredients);
-            
-            for (let i = 0; i < recipe.ingredients.length; i++) {
-                const ingredient = recipe.ingredients[i];
-                const $tr = document.createElement("tr");
-                tableIngredients.appendChild($tr);
-                $tr.innerHTML = `<td>${ingredient.name}</td>
-                                 <td>${ingredient.quantity}</td>
-                                 <td>${ingredient.metric}</td>
-                                `;    
-             
+
+            const createTableIngredients = ()=>{
+
+                const tableIngredients = document.createElement("table");
+                tableIngredients.setAttribute("class", "table");
+                tableIngredients.innerHTML = `<caption>List of the recipe Ingredients</caption>
+                                            <thead>
+                                            <tr>
+                                                <!--<th scope="col">#</th>-->
+                                                <th scope="col">Name</th>
+                                                <th scope="col">Quantity</th>
+                                                <th scope="col">Metric</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody id="tbody">
+                                            </tbody>
+                                            `
+                
+                divIngredient.appendChild(tableIngredients);
+                
+                for (let i = 0; i < recipe.ingredients.length; i++) {
+                    const ingredient = recipe.ingredients[i];
+                    const $tr = document.createElement("tr");
+                    tableIngredients.appendChild($tr);
+                    $tr.innerHTML = `<td>${ingredient.name}</td>
+                                     <td class="quant">${ingredient.quantity * parseInt(nbServing.textContent)}</td>
+                                     <td>${ingredient.metric}</td>
+                                    `;
+                }
             }
-           
+
+            createTableIngredients();
+
+            // serving between 2 to 8 pers
+            
+            const substract = (button, nbpers)=>{
+                button.addEventListener("click", e =>{
+                    e.preventDefault();
+                    divIngredient.innerHTML = "";
+                    if(recipe.name === "Canelés bordelais" || recipe.name === "Moelleux au chocolat"){
+                        substractBtn.style.disabled = true;
+                        addBtn.style.disabled = true;
+                    } else {
+
+                        if(nbpers.textContent <= 2){
+                            button.style.disabled = true;
+                        } else {
+                            divIngredient.innerHTML = "";
+                            nbpers.textContent -- ;
+                            console.log("substract");
+                            createTableIngredients();
+                        }
+                    }
+                    
+                });
+            }
+            
+            const add = (button, nbpers)=>{
+                button.addEventListener("click", e =>{
+                    //e.preventDefault();
+                    if(recipe.name === "Canelés bordelais" || recipe.name === "Moelleux au chocolat"){
+                        substractBtn.style.disabled = true;
+                        addBtn.style.disabled = true;
+                    } else {
+
+                        if(nbpers.textContent >= 8){
+                            button.style.disabled = true;
+                        } else {
+                            divIngredient.innerHTML = "";
+                            nbpers.textContent ++ ;
+                            console.log("add");
+                            createTableIngredients();
+                        }
+                    }
+                });
+            }
+
+            if(recipe.name === "Canelés bordelais" || recipe.name === "Moelleux au chocolat"){
+                nbServing.textContent = 4;
+                substractBtn.style.disabled = true;
+                addBtn.style.disabled = true;
+                divIngredient.innerHTML = "";
+                createTableIngredients();
+            } else {
+                nbServing.textContent = 2;
+                substract(substractBtn, nbServing);
+                add(addBtn, nbServing);  
+            }
+
         });
 
     });

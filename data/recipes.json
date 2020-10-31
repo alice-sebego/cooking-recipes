@@ -9,11 +9,11 @@
         "resting_time": "5 mn",
         "ingredients": [
                         {"name": "magret de canard",
-                        "quantity": 150,
-                        "metric": "grammes"
+                        "quantity": 1,
+                        "metric": "pièce(s)"
                         },
                         {"name": "sel",
-                            "quantity": 1,
+                            "quantity": 0.5,
                             "metric": "cuil. à soupe"
                         },
                         {"name": "romarin",

@@ -62,21 +62,14 @@ ajaxGet("http://localhost/cooking-recipes/data/recipes.json", reponse =>{
             resting.textContent = recipe.resting_time;
             
             // Overview
-            if(recipe.cost === "cheap"){
-                cost.textContent = cheap;
-            } else if (recipe.cost === "affordable"){
-                cost.textContent = affordable;
-            } else {
-                cost.textContent = expensive;
-            }
 
-            if(recipe.difficulty === "easy"){
-                difficulty.innerHTML = easy;
-            } else if (recipe.difficulty === "intermediate"){
-                difficulty.innerHTML = intermediate;
-            } else {
-                difficulty.innerHTML = difficult;
-            }
+            recipe.cost === "cheap" ? cost.textContent = cheap :
+            recipe.cost === "affordable" ? cost.textContent = affordable :
+            cost.textContent = expensive;
+            
+            recipe.difficulty === "easy" ? difficulty.innerHTML = easy : 
+            recipe.difficulty === "intermediate" ? difficulty.innerHTML = intermediate: 
+            difficulty.innerHTML = difficult;
             
             // ingredients
 

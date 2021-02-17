@@ -25,7 +25,7 @@
                             "metric": "pincée"
                         }
                       ],
-        "picture": "images/magret-canard-french-cooking"              
+        "picture": "./images/magret-canard-french-cooking"              
     },
     {
         "name": "Moelleux au chocolat",
@@ -61,7 +61,7 @@
                             "metric": "sachet"
                         }
                        ], 
-        "picture": "images/moelleux-au-chocolat-french-cooking"              
+        "picture": "./images/moelleux-au-chocolat-french-cooking"              
     },
     {
         "name": "Salade landaise",
@@ -101,7 +101,7 @@
                             "metric": "cl"
                         }
                        ], 
-        "picture": "images/salade-landaise-french-cooking"              
+        "picture": "./images/salade-landaise-french-cooking"              
     },
     {
         "name": "Canelés bordelais",
@@ -149,6 +149,6 @@
                             "metric": "pincée"
                         }
                        ], 
-        "picture": "images/canele-bordelais-french-cooking"              
+        "picture": "./images/canele-bordelais-french-cooking"              
     }        
 ]

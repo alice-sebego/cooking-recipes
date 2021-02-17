@@ -30,7 +30,7 @@ const difficult ="<i class='fas fa-star'></i><i class='fas fa-star'></i><i class
 
 
 // --- Create each content for each recipe --- //
-ajaxGet("http://localhost/cooking-recipes/data/recipes.json", reponse =>{
+ajaxGet("./data/recipes.json", reponse =>{
     const recipes = JSON.parse(reponse);
     
     recipes.forEach(recipe => {
@@ -131,7 +131,7 @@ ajaxGet("http://localhost/cooking-recipes/data/recipes.json", reponse =>{
             
             const add = (button, nbpers)=>{
                 button.addEventListener("click", e =>{
-                    //e.preventDefault();
+                    e.preventDefault();
                     if(recipe.name === "Canelés bordelais" || recipe.name === "Moelleux au chocolat"){
                         substractBtn.style.disabled = true;
                         addBtn.style.disabled = true;
